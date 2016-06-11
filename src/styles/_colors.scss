@@ -1,0 +1,19 @@
+//Declarations Couleurs
+$white:#FFF;
+$black:#000;
+$dark-red:#B50000;
+$light-grey:#F9F9F9;
+$cream:#FFF1E0;
+
+
+body{
+	background-color: $white;
+}
+
+.header--tagline{
+	color:$dark-red;
+}
+
+.article--content{
+	background-color:$light-grey;
+}

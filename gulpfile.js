@@ -10,7 +10,7 @@ var minifycss = require('gulp-minify-css');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 
-gulp.task('browser-sync', function() {
+gulp.task('serve', function() {
   browserSync({
     server: {
        baseDir: "./"
@@ -18,7 +18,7 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('bs-reload', function () {
+gulp.task('reload', function () {
   browserSync.reload();
 });
 
@@ -29,7 +29,7 @@ gulp.task('images', function(){
 });
 
 gulp.task('styles', function(){
-  gulp.src(['src/styles/**/*.scss'])
+  gulp.src(['src/styles/main.scss'])
     .pipe(plumber({
       errorHandler: function (error) {
         console.log(error.message);
@@ -59,10 +59,10 @@ gulp.task('scripts', function(){
     .pipe(browserSync.reload({stream:true}))
 });
 
-gulp.task('default', ['browser-sync'], function(){
+gulp.task('default', ['serve'], function(){
   gulp.watch("src/styles/**/*.scss", ['styles']);
   gulp.watch("src/scripts/**/*.js", ['scripts']);
-  gulp.watch("*.html", ['bs-reload']);
+  gulp.watch("*.html", ['reload']);
 });
 
 gulp.task('dist',['scripts','styles','images']);

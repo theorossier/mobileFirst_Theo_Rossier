@@ -1,0 +1,23 @@
+nav{
+
+	display:none;
+}
+
+//Menu Icon
+.navIcon{
+	position: relative;
+	position: fixed;
+	right: 15px;
+	transform:rotate(90deg);
+
+	&:before{
+		content:'';
+		display: block;
+		height: 3px;
+		width:45px;
+		background-color: $cream;
+		position: absolute;
+		top:5px;
+		z-index: -1;
+	}
+}
