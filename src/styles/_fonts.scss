@@ -1,3 +1,5 @@
+//SETUP FONTS
+
 @mixin fontFace($fontname, $fontfile, $fontweight: normal, $fontstyle: normal) {
   @font-face {
     font-family: $fontname;
@@ -10,15 +12,94 @@
     font-style: $fontstyle;
   }
 }
+
+html{
+    font-size: 62.5%;
+}
+
+
+
+
 // Titles + CTA Article
 @include fontFace('Montserrat-Bold','Montserrat-Bold');
 
-h1{
+h1,.article--title,.event--desc, .article--cta{
     font-family: 'Montserrat-Bold';
+    text-transform: uppercase;
 }
 
-// Text
 
-@include fontFace('Merriweath-Light','Merriweath-Light');
 
-@include fontFace('Merriweath-Italic','Merriweath-Italic');
+//HEAD Title
+h1{
+
+    font-size: 2.6rem;    
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.21);
+    letter-spacing: 11.79px;
+    line-height: 3.1rem;
+    text-align: center;
+    span{
+        text-align: justify;
+        display: block;
+    }
+}
+
+//HEAD tagline
+@include fontFace('Merriweather-Italic','Merriweather-Italic');
+.header--tagline{
+    font-family: 'Merriweather-Italic';
+    font-size:1.4rem;
+}
+
+//2nd Titles
+.article--title{
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+}
+
+//CTA
+.article--cta{
+   font-size: 1.2rem; 
+   letter-spacing: 0.12rem;
+}
+
+
+
+// Texts
+
+//EVENT
+
+.event--desc{
+    font-size: 1.3rem;
+    line-height: 1.95rem;
+    letter-spacing: 0.4rem;
+    
+
+}
+
+
+//Articles
+@include fontFace('Merriweather-Light','Merriweather-Light');
+
+.article--desc{
+    font-family: 'Merriweather-Light';
+    font-size: 1.2rem;
+    line-height: 2.1rem;
+
+}
+
+//MENU + LM HEAD + LM FOOTER
+@include fontFace('SFUIText','SFUIText-HeavyItalic');
+.navIcon, header:before, footer:before,nav{
+    font-family: 'SFUIText';
+}
+
+
+//NAV ICON
+.navIcon{
+    font-size: 1.8rem;
+}
+
+
+
+

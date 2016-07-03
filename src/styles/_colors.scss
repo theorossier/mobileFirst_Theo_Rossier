@@ -10,10 +10,6 @@ body{
 	background-color: $white;
 }
 
-.header--tagline{
+.header--tagline, a{
 	color:$dark-red;
-}
-
-.article--content{
-	background-color:$light-grey;
 }

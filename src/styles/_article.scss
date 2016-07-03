@@ -1,0 +1,62 @@
+.article{
+	margin-top:40px;
+	margin-bottom:40px;
+}
+
+.article--image{
+	line-height:0;
+}
+
+.article--content{
+	padding:5.33333%;
+	background-color:$light-grey;
+}
+
+.article--desc{
+	margin-bottom:20px;
+	margin-top:20px;
+}
+
+.article--cta{
+	
+	//UNDERLINE
+	&:after{
+
+		content:'';
+		display:block;
+		height:2px;
+		width: 0;
+		margin-top: 10px;
+		background-color:$dark-red;
+		transition: 0.3s;
+	
+	}
+
+
+	&:hover{
+		&:after{
+				width: 100%;
+				transition: 0.3s;
+		}
+	}
+
+}
+
+//MEDIAQUERIES
+@media #{$large}{
+	article{
+		display: table;
+		width: 100%;
+
+		.article--content{
+			vertical-align: middle;
+			padding: 0 5.33333%;
+		}
+
+		.article--image , .article--content{
+			display: table-cell;
+			width: 50%;
+		}
+		
+	}
+}
