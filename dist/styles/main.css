@@ -48,7 +48,7 @@ html {
   font-weight: normal;
   font-style: normal; }
 
-h1, .article--title, .event--desc, .article--cta {
+h1, .article--title, .event--desc, .article--cta, .more--btn, .diggzone--playlist, .title {
   font-family: 'Montserrat-Bold';
   text-transform: uppercase; }
 
@@ -73,18 +73,19 @@ h1 {
   font-family: 'Merriweather-Italic';
   font-size: 1.4rem; }
 
-.article--title {
+.article--title, .diggzone--playlist, .title {
   font-size: 1.6rem;
-  letter-spacing: 0.2rem; }
+  letter-spacing: 0.2rem;
+  line-height: 2.4rem; }
 
-.article--cta {
+.article--cta, .more--btn {
   font-size: 1.2rem;
   letter-spacing: 0.12rem; }
 
 .event--desc {
   font-size: 1.3rem;
   line-height: 1.95rem;
-  letter-spacing: 0.4rem; }
+  letter-spacing: 0.2rem; }
 
 @font-face {
   font-family: "Merriweather-Light";
@@ -116,6 +117,11 @@ body {
 
 .header--tagline, a {
   color: #B50000; }
+
+@media only screen and (min-width: 1000px) {
+  .event--desc {
+    font-size: 2.3rem;
+    line-height: 3.45rem; } }
 
 .navIcon {
   position: fixed;
@@ -189,9 +195,63 @@ nav {
   position: fixed; }
 
 @media only screen and (min-width: 1000px) {
-  .event--desc {
-    font-size: 2.3rem;
-    line-height: 3.45rem; } }
+  .navIcon {
+    display: none; }
+  nav {
+    visibility: inherit;
+    display: block;
+    text-align: right; }
+    nav ul li {
+      display: inline-block;
+      font-size: 2.4rem;
+      color: #000; } }
+
+.diggzone {
+  margin-top: 40px; }
+  .diggzone .diggzone--playlist {
+    display: block;
+    width: 100%;
+    position: relative; }
+    @media only screen and (min-width: 568px) {
+      .diggzone .diggzone--playlist {
+        display: inline-block;
+        width: 50%; } }
+    .diggzone .diggzone--playlist .diggzone--playlist--desc {
+      position: absolute;
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
+    .diggzone .diggzone--playlist .diggzone--playlist--img {
+      -webkit-filter: grayscale(90%);
+              filter: grayscale(90%);
+      -webkit-filter: brightness(0.5);
+              filter: brightness(0.5);
+      transition: 0.3s; }
+      .diggzone .diggzone--playlist .diggzone--playlist--img:hover {
+        -webkit-filter: grayscale(10%);
+                filter: grayscale(10%);
+        -webkit-filter: brightness(0.7);
+                filter: brightness(0.7);
+        transition: 0.3s; }
+  .diggzone a {
+    color: #FFF1E0; }
+  @media only screen and (min-width: 1000px) {
+    .diggzone {
+      margin-top: 40px;
+      display: table;
+      width: 100%;
+      color: #FFF1E0; }
+      .diggzone .diggzone--playlist {
+        display: table-cell;
+        width: 25%; } }
+
+.title {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10rem; }
 
 .article {
   margin-top: 40px;
@@ -286,7 +346,6 @@ footer {
 
 .container {
   margin: 5.33333%;
-  max-width: 1000px;
   position: relative; }
 
 img {
@@ -316,7 +375,8 @@ header {
     text-align: center; }
 
 .event {
-  position: relative; }
+  position: relative;
+  margin-bottom: 10rem; }
 
 .event--desc {
   position: absolute;
@@ -328,11 +388,32 @@ header {
   width: 80%;
   color: #FFF; }
 
+.more--btn {
+  display: block;
+  margin: 30px auto;
+  width: 160px;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #B50000;
+  margin-bottom: 40px;
+  transition: 0.2s ease; }
+  .more--btn:hover {
+    background-color: #B50000;
+    color: #FFF;
+    border: 2px solid #B50000;
+    transition: 0.2s ease; }
+
+@media only screen and (min-width: 568px) {
+  .container {
+    max-width: 60%;
+    margin: 0 auto; } }
+
 @media only screen and (min-width: 1000px) {
   body {
     border: 20px #FFF1E0 solid; }
   .container {
-    margin: 0 auto; }
+    margin: 0 auto;
+    max-width: 1000px; }
     .container h1 {
       margin: 0;
       margin-bottom: 20px;

@@ -1,4 +1,5 @@
 $large:'only screen and (min-width: 1000px)';
+$medium:'only screen and (min-width: 568px)';
 
 @media #{$large}{
     .event--desc{

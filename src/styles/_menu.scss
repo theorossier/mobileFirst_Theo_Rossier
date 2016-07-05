@@ -95,3 +95,22 @@ nav{
 }
 
 
+@media #{$large} {
+	.navIcon{
+		display: none;
+	}
+
+	nav{
+
+	visibility:inherit;	
+	display:block;
+text-align: right;
+
+	ul li{
+		display: inline-block;
+		font-size: 2.4rem;
+		color:$black;
+
+	}
+}
+}

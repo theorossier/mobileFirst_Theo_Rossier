@@ -1,12 +1,9 @@
 
 
 //GENERAL
-body{
-	
-}
+
 .container{
 	margin:5.33333%;
-	max-width: 1000px;
 	position: relative;
 
 }
@@ -20,7 +17,7 @@ img{
 //HEADER
 header{
 	position: relative;
-
+	margin: 40px 0;
 	&:before{
 		content:'LM';
 		display: block;
@@ -47,13 +44,14 @@ header{
 		text-align: center;
 	}
 
-	margin: 40px 0;
+	
 }
 
 
 //EVENT
 .event{
 	position: relative;
+	margin-bottom: 10rem;
 }
 
 .event--desc{
@@ -68,6 +66,36 @@ header{
 
 }
 
+.more--btn{
+	display:block;
+	margin: 30px auto;
+    width: 160px;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid $dark-red;
+    margin-bottom: 40px;
+    transition: 0.2s ease;
+
+    &:hover{
+    	background-color: $dark-red;
+    	color: $white;
+    	border: 2px solid $dark-red;
+    	transition: 0.2s ease;
+
+    }
+}
+
+
+
+
+
+@media #{$medium}{
+	.container{
+		max-width: 60%;
+		margin: 0 auto;
+	}
+}
+
 @media #{$large}{
 	
 	
@@ -78,7 +106,7 @@ header{
 	}
 	.container{
 		margin: 0 auto;
-
+		max-width: 1000px;
 		h1{
 		margin: 0;
 		margin-bottom: 20px;

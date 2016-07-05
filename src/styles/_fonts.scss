@@ -23,7 +23,7 @@ html{
 // Titles + CTA Article
 @include fontFace('Montserrat-Bold','Montserrat-Bold');
 
-h1,.article--title,.event--desc, .article--cta{
+h1,.article--title,.event--desc, .article--cta,.more--btn,.diggzone--playlist,.title{
     font-family: 'Montserrat-Bold';
     text-transform: uppercase;
 }
@@ -38,6 +38,7 @@ h1{
     letter-spacing: 11.79px;
     line-height: 3.1rem;
     text-align: center;
+
     span{
         text-align: justify;
         display: block;
@@ -52,18 +53,17 @@ h1{
 }
 
 //2nd Titles
-.article--title{
+.article--title,.diggzone--playlist,.title{
     font-size: 1.6rem;
     letter-spacing: 0.2rem;
+    line-height: 2.4rem;
 }
 
 //CTA
-.article--cta{
+.article--cta,.more--btn{
    font-size: 1.2rem; 
    letter-spacing: 0.12rem;
 }
-
-
 
 // Texts
 
@@ -72,7 +72,7 @@ h1{
 .event--desc{
     font-size: 1.3rem;
     line-height: 1.95rem;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.2rem;
     
 
 }
