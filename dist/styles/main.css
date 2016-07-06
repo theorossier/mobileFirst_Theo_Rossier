@@ -73,7 +73,7 @@ h1 {
   font-family: 'Merriweather-Italic';
   font-size: 1.4rem; }
 
-.article--title, .diggzone--playlist, .title {
+.article--title, .title {
   font-size: 1.6rem;
   letter-spacing: 0.2rem;
   line-height: 2.4rem; }
@@ -112,13 +112,17 @@ h1 {
 .navIcon {
   font-size: 1.8rem; }
 
+.diggzone--playlist {
+  font-size: 1.6rem;
+  letter-spacing: 0.8rem; }
+
 body {
   background-color: #FFF; }
 
 .header--tagline, a {
   color: #B50000; }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1080px) {
   .event--desc {
     font-size: 2.3rem;
     line-height: 3.45rem; } }
@@ -194,17 +198,43 @@ nav {
   overflow-y: hidden;
   position: fixed; }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1080px) {
   .navIcon {
     display: none; }
-  nav {
+  header {
+    display: table;
+    width: 100%; }
+  .desktopNav {
     visibility: inherit;
     display: block;
+    vertical-align: middle;
     text-align: right; }
-    nav ul li {
+    .desktopNav li {
+      position: relative;
       display: inline-block;
-      font-size: 2.4rem;
-      color: #000; } }
+      margin-left: 2.5rem;
+      font-size: 1.8rem;
+      text-transform: uppercase; }
+      .desktopNav li:hover {
+        opacity: 1;
+        transition: all 0.2s ease; }
+        .desktopNav li:hover:after {
+          width: 2rem;
+          transition: all 0.2s; }
+      .desktopNav li:after {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        position: absolute;
+        height: 0.5rem;
+        width: 0rem;
+        background-color: #B50000;
+        margin-top: 1rem;
+        transition: all 0.2s; }
+      .desktopNav li a {
+        color: #000; }
+  .header--col {
+    display: table-cell; } }
 
 .diggzone {
   margin-top: 40px; }
@@ -236,8 +266,8 @@ nav {
                 filter: brightness(0.7);
         transition: 0.3s; }
   .diggzone a {
-    color: #FFF1E0; }
-  @media only screen and (min-width: 1000px) {
+    color: #FFF; }
+  @media only screen and (min-width: 1080px) {
     .diggzone {
       margin-top: 40px;
       display: table;
@@ -246,12 +276,6 @@ nav {
       .diggzone .diggzone--playlist {
         display: table-cell;
         width: 25%; } }
-
-.title {
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-  margin-top: 10rem; }
 
 .article {
   margin-top: 40px;
@@ -281,7 +305,7 @@ nav {
   width: 100%;
   transition: 0.3s; }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1080px) {
   article {
     display: table;
     width: 100%; }
@@ -320,9 +344,9 @@ footer {
     footer .footer--social span {
       display: block;
       text-indent: -9999px; }
-  footer li {
-    display: inline-block;
-    margin-right: 2rem; }
+    footer .footer--social li {
+      display: inline-block;
+      margin-right: 2rem; }
   footer .footer--arrowTop {
     content: '';
     display: block;
@@ -340,9 +364,16 @@ footer {
       margin-top: 0.7rem;
       font-size: 1.4rem; }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 568px) {
   footer {
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+    footer .footer--social {
+      float: right;
+      margin-top: 2rem;
+      margin-right: 5rem; }
+      footer .footer--social li {
+        display: inline-block;
+        margin-left: 2rem; } }
 
 .container {
   margin: 5.33333%;
@@ -403,12 +434,18 @@ header {
     border: 2px solid #B50000;
     transition: 0.2s ease; }
 
+.title {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10rem; }
+
 @media only screen and (min-width: 568px) {
   .container {
     max-width: 60%;
     margin: 0 auto; } }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1080px) {
   body {
     border: 20px #FFF1E0 solid; }
   .container {

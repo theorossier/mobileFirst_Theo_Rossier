@@ -40,8 +40,9 @@
 
 
 
-a{ color:$cream;}
+a{ color:$white;}
 
+//MEDIAQUERIES
 
 	@media #{$large}{
 
@@ -57,11 +58,6 @@ a{ color:$cream;}
 	}
 }
 
-.title{
-	text-align: center;
-	display:block;
-	margin: 0 auto;
-	margin-top: 10rem;
-}
+
 
 

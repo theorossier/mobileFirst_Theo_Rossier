@@ -94,23 +94,65 @@ nav{
 	position: fixed;
 }
 
-
+//MEDIAQUERIES
 @media #{$large} {
 	.navIcon{
 		display: none;
 	}
-
-	nav{
-
-	visibility:inherit;	
-	display:block;
-text-align: right;
-
-	ul li{
-		display: inline-block;
-		font-size: 2.4rem;
-		color:$black;
-
+	header{
+		display: table;
+		width: 100%;
 	}
-}
+
+	.desktopNav{
+
+		visibility:inherit;	
+		display:block;
+		vertical-align: middle;
+		text-align: right;
+
+
+		li{
+	    	position: relative;
+	    	display: inline-block;
+			margin-left: 2.5rem;
+	    	font-size: 1.8rem;
+	    	text-transform: uppercase;
+			
+	    		
+	    		&:hover{
+	    			opacity: 1;
+	    			transition: all 0.2s ease;
+
+	    			&:after{
+	    			width: 2rem;
+	    			transition: all 0.2s;
+	    			}
+
+	    		}
+
+	    		&:after{
+	    		content:'';
+	    		display: block;
+	    		margin: 0 auto;
+	    		position: absolute;
+	    		height:0.5rem;
+	    		width: 0rem;
+	    		background-color:$dark-red;
+	    		margin-top: 1rem;
+	    		transition: all 0.2s;
+	    		}
+
+			
+			a{
+				color:$black;
+			}
+
+		}
+	}
+
+	.header--col{
+		display: table-cell;
+	}
+
 }

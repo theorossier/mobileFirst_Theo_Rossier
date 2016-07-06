@@ -2,8 +2,6 @@ $(document).ready(function() {
   
 //MENU
 
-
-var dark_red = '#B50000';
   $('.navIcon').click(function(){
 
 		$('nav').toggleClass('mobileNav');
@@ -20,4 +18,15 @@ var dark_red = '#B50000';
 }
 
   });
+
+//RESIZE MENU
+$(window).resize(function(){
+
+ if($(window).width()>1080){
+  $('nav').removeClass('mobileNav').addClass('desktopNav');
+  $('body').removeClass('overflow');
+ }
+
+});
+
 });

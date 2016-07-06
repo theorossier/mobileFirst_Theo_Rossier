@@ -33,13 +33,15 @@ footer{
 		display: block;
 		text-indent: -9999px;
 		}
+
+		li{
+		display:inline-block;
+		margin-right: 2rem;
+		}
 	}
 	
 
-	li{
-		display:inline-block;
-		margin-right: 2rem;
-	}
+	
 
 	.footer--arrowTop{
 		content: '';
@@ -64,11 +66,25 @@ footer{
 	}
 
 }
+
 //MEDIAQUERIES
-@media #{$large}{
+@media #{$medium}{
 	footer{
 		margin-bottom: 20px;
 
+		.footer--social{
+		float:right;
+		margin-top: 2rem;
+		margin-right: 5rem;
+
+		li{
+		display:inline-block;
+		margin-left: 2rem;
+		}
 	}
+
+	}
+
+
 }
 
