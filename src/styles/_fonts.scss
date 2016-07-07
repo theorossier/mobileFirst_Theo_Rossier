@@ -52,8 +52,8 @@ h1{
     font-size:1.4rem;
 }
 
-//2nd Titles
-.article--title,.title{
+//Articles Titles
+.article--title{
     font-size: 1.6rem;
     letter-spacing: 0.2rem;
     line-height: 2.4rem;
@@ -73,6 +73,11 @@ h1{
     font-size: 1.3rem;
     line-height: 1.95rem;
     letter-spacing: 0.2rem;
+    @media #{$large}{
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    letter-spacing: 0.2rem;
+    }
     
 
 }
@@ -100,10 +105,20 @@ h1{
     font-size: 1.8rem;
 }
 
+//Digzone titles
 .diggzone--playlist{
     font-size: 1.6rem;
     letter-spacing: 0.8rem;
 }
 
+//Titles
+.title{
 
-
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    
+    @media #{$large}{
+    font-size: 2.4rem;
+    letter-spacing: 0.8rem;
+    }
+}
